@@ -2,24 +2,24 @@
 class Tree < Formula
   desc "Clone git repositories to $HOME/src/github.com/<user>/<repo>"
   homepage ""
-  version "1.1.201910072044"
+  version "1.1.201910072050"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/homburg/tree/releases/download/v1.1.201910072044/tree_1.1.201910072044_darwin_amd64.tar.gz"
-    sha256 "06c3af6bbb9bdee3b03b09018853a0bc9350ded38b72bae1dfa2ed69003eb808"
+    url "https://github.com/homburg/tree/releases/download/v1.1.201910072050/tree_1.1.201910072050_darwin_amd64.tar.gz"
+    sha256 "9a96da87c27a1bab71bb79b74c5d22246887f0eedea50b7ceab7abe8f2cb8898"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/homburg/tree/releases/download/v1.1.201910072044/tree_1.1.201910072044_linux_amd64.tar.gz"
-      sha256 "bdcdf15cc501bd9800805e795f86a72b12639f45f0cfce45cbf4b3761f53545e"
+      url "https://github.com/homburg/tree/releases/download/v1.1.201910072050/tree_1.1.201910072050_linux_amd64.tar.gz"
+      sha256 "cf2ead57194b2c2833d68064027fb518e3acfc95e81436e8d9131e89020f81bd"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homburg/tree/releases/download/v1.1.201910072044/tree_1.1.201910072044_linux_arm64.tar.gz"
-        sha256 "72b478240f37cd03e69e9726280aa6a50c3c49de1fb4d5b051d1a124c163369f"
+        url "https://github.com/homburg/tree/releases/download/v1.1.201910072050/tree_1.1.201910072050_linux_arm64.tar.gz"
+        sha256 "af2e64345d86be9bd69e144ae24481e37b763150a16f1c4ae4995332f41e813b"
       else
-        url "https://github.com/homburg/tree/releases/download/v1.1.201910072044/tree_1.1.201910072044_linux_armv6.tar.gz"
-        sha256 "b85f88d2456e4ca196822c14f67f81a108d7e718daa57721c3d8a4a3452ecf2d"
+        url "https://github.com/homburg/tree/releases/download/v1.1.201910072050/tree_1.1.201910072050_linux_armv6.tar.gz"
+        sha256 "8e87cb2c4820ab3612898dece1634a5f8586c24d34179c4c44f03a9026b502e3"
       end
     end
   end
