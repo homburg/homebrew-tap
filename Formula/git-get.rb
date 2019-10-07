@@ -2,27 +2,29 @@
 class GitGet < Formula
   desc "Clone git repositories to $HOME/src/github.com/<user>/<repo>"
   homepage ""
-  version "1.1.201910072006"
+  version "1.1.201910072018"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/homburg/git-get/releases/download/v1.1.201910072006/git-get_1.1.201910072006_darwin_amd64.tar.gz"
-    sha256 "318bd501d4b6d8a4d6557580918fd6beb4f997724236e8add5cee472f21da9db"
+    url "https://github.com/homburg/git-get/releases/download/v1.1.201910072018/git-get_1.1.201910072018_darwin_amd64.tar.gz"
+    sha256 "3c364b90e5cb50f85f89e3dec3909b11c0491560d12bb9224cd8d227a6de49f3"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/homburg/git-get/releases/download/v1.1.201910072006/git-get_1.1.201910072006_linux_amd64.tar.gz"
-      sha256 "2077cb311bb5f3ee328363630954487ecb65365a8fb496135a06cd6e84df67be"
+      url "https://github.com/homburg/git-get/releases/download/v1.1.201910072018/git-get_1.1.201910072018_linux_amd64.tar.gz"
+      sha256 "74ccd300464a090537a671be73598f5b1fba70613d82f41768953852bfe7d7f6"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homburg/git-get/releases/download/v1.1.201910072006/git-get_1.1.201910072006_linux_arm64.tar.gz"
-        sha256 "1b8fa7e50b9bb7871c592712a5cbeb64f8ec6458d8971ffcf57b3f11a60fa662"
+        url "https://github.com/homburg/git-get/releases/download/v1.1.201910072018/git-get_1.1.201910072018_linux_arm64.tar.gz"
+        sha256 "dd06636d4033efd3ea156bde93c17baf6bbecff0d541e2706f9d368395ffd1a4"
       else
-        url "https://github.com/homburg/git-get/releases/download/v1.1.201910072006/git-get_1.1.201910072006_linux_armv6.tar.gz"
-        sha256 "9070b1a317c1147b61bd1611f11c8f56a7df6a4a84188fb4b66195bfd7a07aa0"
+        url "https://github.com/homburg/git-get/releases/download/v1.1.201910072018/git-get_1.1.201910072018_linux_armv6.tar.gz"
+        sha256 "6b860a3995fa83ca76a62e604663636d27e91cb47c5c943db685dfcc0a39ae7b"
       end
     end
   end
+  
+  depends_on "git"
 
   def install
     bin.install "git-get"
