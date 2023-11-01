@@ -5,13 +5,13 @@
 class GitGet < Formula
   desc "Clone git repositories to $HOME/src/github.com/<user>/<repo>"
   homepage ""
-  version "1.2.202311011933"
+  version "1.2.202311011937"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/homburg/git-get/releases/download/v1.2.202311011933/git-get_1.2.202311011933_darwin_all.tar.gz"
-    sha256 "05eb1216677127995d870372b5d5ca854fc0783add8718f72aa916f3aae75d35"
+    url "https://github.com/homburg/git-get/releases/download/v1.2.202311011937/git-get_1.2.202311011937_darwin_all.tar.gz"
+    sha256 "e69d05244089337087ccc2eaf1311614a129707113540198aae787dc673f9398"
 
     def install
       bin.install "git-get"
@@ -19,25 +19,25 @@ class GitGet < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/homburg/git-get/releases/download/v1.2.202311011933/git-get_1.2.202311011933_linux_armv6.tar.gz"
-      sha256 "8ae063f306b1732cbfd0ce70721e947b127f9bd595cfd186be9ac53abda6aac0"
+    if Hardware::CPU.intel?
+      url "https://github.com/homburg/git-get/releases/download/v1.2.202311011937/git-get_1.2.202311011937_linux_amd64.tar.gz"
+      sha256 "610dde134a35a1de364251d7be880baf145c5ad84e80a1ada0995dd2d69bb257"
 
       def install
         bin.install "git-get"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/homburg/git-get/releases/download/v1.2.202311011933/git-get_1.2.202311011933_linux_amd64.tar.gz"
-      sha256 "f8b5f4b3147121e24891b63f3ea6ea096b1f67f4e0a38384ed0a1acd7d19c2e1"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/homburg/git-get/releases/download/v1.2.202311011937/git-get_1.2.202311011937_linux_armv6.tar.gz"
+      sha256 "baf04bf1d840172a5d5ce14e737dc0146e14c8050f727b95a3c4663a6338b970"
 
       def install
         bin.install "git-get"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homburg/git-get/releases/download/v1.2.202311011933/git-get_1.2.202311011933_linux_arm64.tar.gz"
-      sha256 "b7c5cdb41de832145175d8ea30e247c7b9ad0fb5d56eb2d0e217fc22db405680"
+      url "https://github.com/homburg/git-get/releases/download/v1.2.202311011937/git-get_1.2.202311011937_linux_arm64.tar.gz"
+      sha256 "05510d5d1dce0d6e4f933264c7f5915d0ff3087089964b868aa20ee64372722f"
 
       def install
         bin.install "git-get"
